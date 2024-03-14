@@ -76,7 +76,9 @@ function onClickImage(event) {
     event.preventDefault()
     const { target } = event
 
-    if (!target === target.classList.contains("gallery-image")) return
+  if (!target.classList.contains("gallery-image")) {
+       return
+     } 
     
     const instance = basicLightbox.create(`<img src="${target.dataset.source}" width="1112" height="640">`)
     
